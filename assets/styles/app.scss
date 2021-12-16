@@ -1,0 +1,6 @@
+$background: blue;
+
+@mixin getTitle {
+  font-weight: bold;
+  font-size: 14px;
+}
