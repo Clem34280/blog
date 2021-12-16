@@ -29,9 +29,9 @@ class HomeController extends AbstractController
     }
 
     public function totalCalcul(){
-        $gestionnaireEntite = $this->getDoctrine()->getManager();
+        $gestionEntity = $this->getDoctrine()->getManager();
 
-        $TableContact = $gestionnaireEntite->getRepository(Contact::class);
+        $TableContact = $gestionEntity->getRepository(Contact::class);
 
         return $TableContact->createQueryBuilder('contact')
             ->select('COUNT(contact)')
