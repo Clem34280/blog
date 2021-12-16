@@ -2,4 +2,19 @@
 
 {% block body %}
     <h1>Accueil</h1>
+
+    {% if total >= 1 %}
+        <h1>Vous avez {{ total }} demandes de contact.</h1>
+    {% endif %}
+
+    {% if total == 0 %}
+        <h1>Vous n'avez pas de demande de contact</h1>
+    {% endif %}
+
+    {% if contacts is not empty %}
+        {% for contact in contacts %}
+            <li class="contact"><a href="{{ path('client', {ContactName: contact.id}) }}">Vous avez une demande de contact de la part de {{ contact.name }}</a></li>
+        {% endfor %}
+    {% endif %}
+
 {% endblock body %}

@@ -4,23 +4,8 @@
     </div>
     <nav>
         <ul>
-            <li><a href="/">Accueil</a></li>
-            <li><a href="{{ path('contact') }}">Contact</a></li>
-            <li>
-                <ul>
-                    <li><a href="{{ path('contactCity', {city: 'montpellier'}) }}">Contacter Montpellier</a></li>
-                    <li><a href="{{ path('contact', {name: "alex"}) }}">Contacter de la part d'Alex</a></li>
-                    <li><a href="{{ path('contactCity', {city: 'montpellier', name: "alex"}) }}">Contacter Montpellier
-                            de la
-                            part d'Alex</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="{{ path('blog') }}">Blog</a>
-            </li>
-            <li>
-                <a href="{{ path('blog_creation') }}">Créer un article</a>
-            </li>
+            <li><a href="/" class="active">Accueil</a></li>
+            <li class="dropdown"><a href="{{ path('contact') }}">Contact</a></li>
         </ul>
     </nav>
 </header>
