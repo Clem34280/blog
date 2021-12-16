@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ClientController!{% endblock %}
+
+{% block body %}
+
+    <div>
+        <h1>Bonjour {{ contact.name }}! ✅</h1>
+
+        <h2>Mme. ou Mr. {{ contact.firstName }} {{ contact.name }} veut vous contacter.</h2>
+        <br>
+        <p>Son age est {{ contact.age }} ans.</p>
+        <br>
+
+        {% if contact.newsletter == true %}
+            <p> La newsletter a été acceptée. </p>
+        {% endif %}
+        {% if contact.newsletter == false %}
+            <p> La newsletter a été refusée. </p>
+        {% endif %}
+
+    </div>
+{% endblock %}
